@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "preprotractor": "npx webdriver-manager update --standalone --versions.standalone 2.53.1",
-    "clean": "rm -rf dist",
+    "clean": "sudo rm -rf dist",
     "build": "npm run clean && tsc",
     "test": "npm run build && protractor dist/protractor/local.config.js"
   },
