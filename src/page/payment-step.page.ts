@@ -1,13 +1,13 @@
 import { $, ElementFinder } from 'protractor';
 
 export class PaymentStepPage {
-  private tShirtMenu: ElementFinder;
+  private bankWireBtn: ElementFinder;
 
   constructor () {
-    this.tShirtMenu = $('#block_top_menu > ul > li:nth-child(3) > a');
+    this.bankWireBtn = $('#HOOK_PAYMENT > div:nth-child(1) > div > p > a');
   }
 
-  public async goToTShirtMenu(): Promise<void> {
-    await this.tShirtMenu.click();
+  public async bankWireBtnClick(): Promise<void> {
+    await this.bankWireBtn.click();
   }
 }

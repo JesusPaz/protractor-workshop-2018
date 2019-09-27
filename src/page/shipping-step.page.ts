@@ -1,13 +1,19 @@
 import { $, ElementFinder } from 'protractor';
 
 export class ShippingStepPage {
-  private tShirtMenu: ElementFinder;
+  private agreeTermsCheck: ElementFinder;
+  private toCheckoutBtn: ElementFinder;
 
   constructor () {
-    this.tShirtMenu = $('#block_top_menu > ul > li:nth-child(3) > a');
+    this.agreeTermsCheck = $('#cgv');
+    this.toCheckoutBtn = $('#form > p > button > span');
   }
 
-  public async goToTShirtMenu(): Promise<void> {
-    await this.tShirtMenu.click();
+  public async agreeTermsCheckClick(): Promise<void> {
+    await this.agreeTermsCheck.click();
   }
+  public async toCheckoutBtnClick(): Promise<void> {
+    await this.toCheckoutBtn.click();
+  }
+
 }

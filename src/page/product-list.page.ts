@@ -1,13 +1,13 @@
 import { $, ElementFinder } from 'protractor';
 
 export class ProductListPage {
-  private tShirtMenu: ElementFinder;
+  private toCheckoutBtn: ElementFinder;
 
   constructor () {
-    this.tShirtMenu = $('#block_top_menu > ul > li:nth-child(3) > a');
+    this.toCheckoutBtn = $('[style*="display: block;"] .button-container > a');
   }
 
-  public async goToTShirtMenu(): Promise<void> {
-    await this.tShirtMenu.click();
+  public async clickToCheckoutBtn(): Promise<void> {
+    await this.toCheckoutBtn.click();
   }
 }

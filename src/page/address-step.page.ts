@@ -1,13 +1,13 @@
 import { $, ElementFinder } from 'protractor';
 
 export class AddressStepPage {
-  private tShirtMenu: ElementFinder;
+  private toCheckoutBtn: ElementFinder;
 
   constructor () {
-    this.tShirtMenu = $('#block_top_menu > ul > li:nth-child(3) > a');
+    this.toCheckoutBtn = $('#center_column > form > p > button > span');
   }
 
-  public async goToTShirtMenu(): Promise<void> {
-    await this.tShirtMenu.click();
+  public async toCheckoutBtnClick(): Promise<void> {
+    await this.toCheckoutBtn.click();
   }
 }

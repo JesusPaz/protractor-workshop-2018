@@ -1,13 +1,18 @@
 import { $, ElementFinder } from 'protractor';
 
 export class BankPaymentPage {
-  private tShirtMenu: ElementFinder;
+  private confirmOrderBtn: ElementFinder;
+  private confirmationMsg: ElementFinder;
 
   constructor () {
-    this.tShirtMenu = $('#block_top_menu > ul > li:nth-child(3) > a');
+    this.confirmOrderBtn = $('#cart_navigation > button > span');
+    this.confirmationMsg = $('#center_column > div > p > strong');
   }
 
-  public async goToTShirtMenu(): Promise<void> {
-    await this.tShirtMenu.click();
+  public async confirmOrderBtnClick(): Promise<void> {
+    await this.confirmOrderBtn.click();
+  }
+  public async getConfimMsg(): Promise<string> {
+    return await this.confirmationMsg.getText();
   }
 }
