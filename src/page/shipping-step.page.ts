@@ -12,8 +12,8 @@ export class ShippingStepPage {
   public async agreeTermsCheckClick(): Promise<void> {
     await this.agreeTermsCheck.click();
   }
+
   public async toCheckoutBtnClick(): Promise<void> {
     await this.toCheckoutBtn.click();
   }
-
 }
