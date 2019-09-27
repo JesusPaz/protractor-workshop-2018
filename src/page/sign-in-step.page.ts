@@ -14,9 +14,11 @@ export class SingInStepPage {
   public async sendEmailKeys(): Promise<void> {
     await this.emailKey.sendKeys('aperdomobo@gmail.com');
   }
+
   public async sendPsswordKeys(): Promise<void> {
     await this.passwordKey.sendKeys('WorkshopProtractor');
   }
+
   public async clickSubmitBtn(): Promise<void> {
     await this.submitBtn.click();
   }

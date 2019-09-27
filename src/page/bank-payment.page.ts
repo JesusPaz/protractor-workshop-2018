@@ -12,6 +12,7 @@ export class BankPaymentPage {
   public async confirmOrderBtnClick(): Promise<void> {
     await this.confirmOrderBtn.click();
   }
+
   public async getConfimMsg(): Promise<string> {
     return await this.confirmationMsg.getText();
   }
